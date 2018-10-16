@@ -1,13 +1,13 @@
 #######homicidios###########
 ####MORTES ACIDENTAIS GERAIS
 Mortes_Homicidios <- read.csv2("Mortes_Homicidios_UF.csv")
-Mortes_Homicidios$ESTADOS <- str_trim(Mortes_Homicidios$ESTADOS)
+Mortes_Homicidios$ESTADOS <- estados
 Mortes_Homicidios$UF <- str_trim(Mortes_Homicidios$UF)
 Mortes_Homicidios$REGIAO <- str_trim(Mortes_Homicidios$REGIAO)
 
 ####MORTES ACIDENTAIS PAF
 Mortes_Homicidios_PAF <- read.csv2("Mortes_Arma_Fogo_Homicidios_UF.csv")
-Mortes_Homicidios_PAF$ESTADOS <- str_trim(Mortes_Homicidios$ESTADOS)
+Mortes_Homicidios_PAF$ESTADOS <- estados
 Mortes_Homicidios_PAF$UF <- str_trim(Mortes_Homicidios_PAF$UF)
 Mortes_Homicidios_PAF$REGIAO <- str_trim(Mortes_Homicidios_PAF$REGIAO)
 

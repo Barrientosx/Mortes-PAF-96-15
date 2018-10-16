@@ -1,13 +1,13 @@
 #######MORTES###########
 ####MORTES GERAIS
 Mortes <- read.csv2("Mortes_UF.csv")
-Mortes$ESTADOS <- str_trim(Mortes$ESTADOS)
+Mortes$ESTADOS <- estados
 Mortes$UF <- str_trim(Mortes$UF)
 Mortes$REGIAO <- str_trim(Mortes$REGIAO)
 
 ####MORTES PAF
 Mortes_PAF <- read.csv2("Mortes_Arma_Fogo_UF.csv")
-Mortes_PAF$ESTADOS <- str_trim(Mortes$ESTADOS)
+Mortes_PAF$ESTADOS <- estados
 Mortes_PAF$UF <- str_trim(Mortes_PAF$UF)
 Mortes_PAF$REGIAO <- str_trim(Mortes_PAF$REGIAO)
 

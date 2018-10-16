@@ -1,0 +1,12 @@
+name: TAXAS_ARMAS_DE_FOGO
+title: TAXAS_ARMAS_DE_FOGO
+username:
+account: barrientospersonal
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 512500
+bundleId: 1644978
+url: https://barrientospersonal.shinyapps.io/TAXAS_ARMAS_DE_FOGO/
+when: 1539662939.32405
+asMultiple: FALSE
+asStatic: FALSE

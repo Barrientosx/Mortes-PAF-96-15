@@ -1,11 +1,19 @@
 ####PACOTES
 require(tidyverse)
 require(plotly)
+require(stringi)
 require(reshape2)
 require(shiny)
 require(shinydashboard)
 require(RColorBrewer)
 require(DT)
+
+#####nome dos estados sem acentuacao
+estados <- c("RONDONIA","ACRE","AMAZONAS","RORAIMA","PARA","AMAPA","TOCANTINS","MARANHAO",
+             "PIAUI","CEARA","RIO GRANDE DO NORTE","PARAIBA","PERNAMBUCO","ALAGOAS",
+             "SERGIPE","BAHIA","MINAS GERAIS","ESPIRITO SANTO","RIO DE JANEIRO","SAO PAULO",
+             "PARANA","SANTA CATARINA","RIO GRANDE DO SUL","MATO GROSSO DO SUL","MATO GROSSO",
+             "GOIAS","DISTRITO FEDERAL","BRASIL")
 
 ####primeira letra em maiuscula
 simpleCap <- function(x) {

@@ -1,13 +1,13 @@
 #######SUICIDIOS###########
 ####MORTES SUICIDIOS GERAIS
 Mortes_Suicidio <- read.csv2("Mortes_Suicidio_UF.csv")
-Mortes_Suicidio$ESTADOS <- str_trim(Mortes_Suicidio$ESTADOS)
+Mortes_Suicidio$ESTADOS <- estados
 Mortes_Suicidio$UF <- str_trim(Mortes_Suicidio$UF)
 Mortes_Suicidio$REGIAO <- str_trim(Mortes_Suicidio$REGIAO)
 
 ####MORTES SUICIDIOS PAF
 Mortes_Suicidio_PAF <- read.csv2("Mortes_Arma_Fogo_Suicidio_UF.csv")
-Mortes_Suicidio_PAF$ESTADOS <- str_trim(Mortes_Suicidio$ESTADOS)
+Mortes_Suicidio_PAF$ESTADOS <- estados
 Mortes_Suicidio_PAF$UF <- str_trim(Mortes_Suicidio_PAF$UF)
 Mortes_Suicidio_PAF$REGIAO <- str_trim(Mortes_Suicidio_PAF$REGIAO)
 
