@@ -1,16 +1,26 @@
 #######MORTES###########
+print("LEITURA MORTES")
 ####MORTES GERAIS
-Mortes <- read.csv2("Mortes_UF.csv")
-Mortes$ESTADOS <- estados
+# Mortes <- read.csv2("Mortes_UF.csv")
+# write.csv2(Mortes, "Mortes_UF_UTF8.csv", fileEncoding = "UTF-8")
+Mortes <- read.csv2("Mortes_UF_UTF8.csv", encoding = "UTF-8")
+
+###FORMATACAO
+Mortes$ESTADOS <- str_trim(Mortes$ESTADOS)
 Mortes$UF <- str_trim(Mortes$UF)
 Mortes$REGIAO <- str_trim(Mortes$REGIAO)
 
+print("LEITURA MORTES PAF")
 ####MORTES PAF
-Mortes_PAF <- read.csv2("Mortes_Arma_Fogo_UF.csv")
-Mortes_PAF$ESTADOS <- estados
+# Mortes_PAF <- read.csv2("Mortes_Arma_Fogo_UF.csv")
+# write.csv2(Mortes_PAF, "Mortes_Arma_Fogo_UF_UTF8.csv", fileEncoding = "UTF-8")
+Mortes_PAF <- read.csv2("Mortes_Arma_Fogo_UF_UTF8.csv", encoding = "UTF-8")
+
+Mortes_PAF$ESTADOS <- str_trim(Mortes_PAF$ESTADOS)
 Mortes_PAF$UF <- str_trim(Mortes_PAF$UF)
 Mortes_PAF$REGIAO <- str_trim(Mortes_PAF$REGIAO)
 
+print("AJUSTE MORTES")
 ####melt anos de mortes 
 Mortes <- melt(Mortes,
                id=c("ESTADOS", "UF", "COD", "REGIAO", "COD.REG."))

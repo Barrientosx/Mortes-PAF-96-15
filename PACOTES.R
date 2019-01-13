@@ -1,4 +1,6 @@
 ####PACOTES
+print("PACOTES")
+require(data.table)
 require(tidyverse)
 require(plotly)
 require(stringi)
@@ -8,12 +10,19 @@ require(shinydashboard)
 require(RColorBrewer)
 require(DT)
 
+print("FUNCOES DO AMBIENTE")
 #####nome dos estados sem acentuacao
 estados <- c("RONDONIA","ACRE","AMAZONAS","RORAIMA","PARA","AMAPA","TOCANTINS","MARANHAO",
              "PIAUI","CEARA","RIO GRANDE DO NORTE","PARAIBA","PERNAMBUCO","ALAGOAS",
              "SERGIPE","BAHIA","MINAS GERAIS","ESPIRITO SANTO","RIO DE JANEIRO","SAO PAULO",
              "PARANA","SANTA CATARINA","RIO GRANDE DO SUL","MATO GROSSO DO SUL","MATO GROSSO",
              "GOIAS","DISTRITO FEDERAL","BRASIL")
+# estados <- stri_enc_toutf8(c("RONDÔNIA","ACRE","AMAZONAS","RORAIMA","PARÁ","AMAPÁ","TOCANTINS","MARANHÃO",
+#              "PIAUÍ","CEARÁ","RIO GRANDE DO NORTE","PARAÍBA","PERNAMBUCO","ALAGOAS",
+#              "SERGIPE","BAHIA","MINAS GERAIS","ESPIRITO SANTO","RIO DE JANEIRO","SÃO PAULO",
+#              "PARANA","SANTA CATARINA","RIO GRANDE DO SUL","MATO GROSSO DO SUL","MATO GROSSO",
+#              "GOIAS","DISTRITO FEDERAL","BRASIL"))
+
 
 ####primeira letra em maiuscula
 simpleCap <- function(x) {
@@ -42,9 +51,9 @@ reg_100mil <- function(reg){
 ##criação de tabela com crescimento ano a ano 
 tabela_cresc <- function(dados){
   if("ESTADOS" %in% names(dados)){
-    dcast(dados, ESTADOS+REGIAO ~ ANO)
+    arrange(dcast(dados, ESTADOS+REGIAO ~ ANO),desc(REGIAO))
   }else{
-    dcast(dados, REGIAO ~ ANO) 
+    arrange(dcast(dados, REGIAO ~ ANO),desc(REGIAO)) 
   }
 }
 

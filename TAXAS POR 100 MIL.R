@@ -1,4 +1,5 @@
 ####juntando as populações com as mortes
+print("ADICIONANDO POPULACOES AS TABELAS DE MORTES")
 ##mortes geral
 Mortes_pop <- merge(Mortes, pop_anos_uf, 
                     by = c("UF", "COD", "ANO"))
@@ -23,6 +24,7 @@ Mortes_Suicidio_pop <- merge(Mortes_Suicidio, pop_anos_uf,
 Mortes_Suicidio_PAF_pop <- merge(Mortes_Suicidio_PAF, pop_anos_uf, 
                                  by = c("UF", "COD", "ANO"))
 
+print("CALCULANDO AS TAXAS POR 100 MIL AS TABELAS DE MORTES")
 #####ADICIONANDO AS COLUNAS DE MORTES POR  100 MIL HABITANTES
 ###ufs
 ##mortes geral

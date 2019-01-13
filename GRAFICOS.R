@@ -1,6 +1,5 @@
-source("PACOTES.R")
-
 ###gráficos
+print("GRÁFICOS DE MORTES")
 #####GRAFICOS DOS INDICADORES por região
 Mortes_graf_reg <- graf_reg(Mortes_pop_reg, "MORTES", "MORTES")
 Mortes_Acidental_graf_reg <- graf_reg(Mortes_Acidental_pop_reg, 
@@ -60,7 +59,7 @@ Mortes_Homicidios_graf_uf_nordeste <- graf_uf(Mortes_Homicidios_pop_uf, "nordest
 Mortes_Homicidios_graf_uf_PAF_nordeste <- graf_uf(Mortes_Homicidios_PAF_pop_uf, "nordeste", 
                                          "HOMICIDIOS POR Armas de Fogo", 
                                          "HOMICIDIOS POR Armas de Fogo")
-unique(Mortes_Homicidios_pop_uf$ESTADOS)
+
 ###MORTES SUICIDIOS
 Mortes_Suicidio_graf_uf_nordeste <- graf_uf(Mortes_Suicidio_pop_uf, "nordeste", 
                                    "SUICIDIOS", "SUICIDIOS")

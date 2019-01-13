@@ -1,5 +1,6 @@
 caminho <- "POPULACAO"
 
+print("LEITURA POPULACOES")
 pop95 <- read.csv2(paste0(caminho,"/1995.csv"))
 #pop96 <- read.csv2(paste0(caminho,"/1996.csv"))
 pop97 <- read.csv2(paste0(caminho,"/1997.csv"))
@@ -22,6 +23,7 @@ pop13 <- read.csv2(paste0(caminho,"/2013.csv"))
 pop14 <- read.csv2(paste0(caminho,"/2014.csv"))
 pop15 <- read.csv2(paste0(caminho,"/2015.csv"))
 
+print("AJUSTANDO AS POPULACOES")
 ##agrupando os anos com pop por municipio
 pop01 <- pop01 %>% group_by(SIGLA,COD) %>% summarise(POP2001 = sum(POP.2001)) %>% arrange(COD)
 pop02 <- pop02 %>% group_by(SIGLA,COD) %>% summarise(POP2002 = sum(POP.2002)) %>% arrange(COD)
